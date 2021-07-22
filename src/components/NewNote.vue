@@ -39,6 +39,7 @@ export default {
         addNote () {
             this.note.priority = this.prioritySelected //Записываем значение селекта с выбором приоритета в объект "note"
             this.$emit('addNote', this.note)
+            this.prioritySelected = 'standart' // Возвращаем селекту дефолтное значение
         }
     }
 }
