@@ -20,6 +20,11 @@
 
 <script>
 export default {
+    data() {
+        return {
+            prioritySelected: 'standart'
+        }
+    },
     props: {
         note: {
             type: Object,
@@ -27,10 +32,6 @@ export default {
         },
         priorityList: {
             type: Array,
-            required: true
-        },
-        prioritySelected: {
-            type: String,
             required: true
         }
     },

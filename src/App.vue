@@ -11,7 +11,6 @@
           <newNote
             :note="note"
             :priorityList="priorityList"
-            :prioritySelected="prioritySelected"
             @addNote="addNote"/>
 
           <!-- title -->
@@ -99,8 +98,7 @@ export default {
           title: 'Very important note',
           value: 'very-important'
         }
-      ],
-      prioritySelected: 'standart'
+      ]
     }
   },
   computed: {
