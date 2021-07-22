@@ -8,7 +8,11 @@
           <message v-if="message" :message="message"/>
 
           <!-- new note -->
-          <newNote :note="note" @addNote="addNote"/>
+          <newNote
+            :note="note"
+            :priorityList="priorityList"
+            :prioritySelected="prioritySelected"
+            @addNote="addNote"/>
 
           <!-- title -->
           <div class="note-header">
@@ -56,25 +60,47 @@ export default {
       grid: true,
       note: {
           title: '',
-          descr: ''
+          descr: '',
+          priority: ''
       },
       notes: [
           {
               title: 'First Note',
               descr: 'Description for first note',
-              date: new Date(Date.now()).toLocaleString()
+              date: new Date(Date.now()).toLocaleString(),
+              priority: 'standart'
           },
           {
               title: 'Second Note',
               descr: 'Description for second note',
-              date: new Date(Date.now()).toLocaleString()
+              date: new Date(Date.now()).toLocaleString(),
+              priority: 'standart'
           },
           {
               title: 'Third Note',
               descr: 'Description for third note',
-              date: new Date(Date.now()).toLocaleString()
+              date: new Date(Date.now()).toLocaleString(),
+              priority: 'standart'
           }
-      ]
+      ],
+      priorityList: [
+        {
+          id: 1,
+          title: 'Standard note',
+          value: 'standart'
+        },
+        {
+          id: 2,
+          title: 'Important note',
+          value: 'important'
+        },
+        {
+          id: 3,
+          title: 'Very important note',
+          value: 'very-important'
+        }
+      ],
+      prioritySelected: 'standart'
     }
   },
   computed: {
@@ -99,7 +125,7 @@ export default {
   methods: {
     addNote () {
         //console.log(this.note)
-        let {title, descr} = this.note
+        let {title, descr, priority} = this.note
 
         if(title === '') {
             this.message = 'title can`t be blank!'
@@ -109,7 +135,8 @@ export default {
         this.notes.push({
             title,
             descr,
-            date: new Date(Date.now()).toLocaleString()
+            date: new Date(Date.now()).toLocaleString(),
+            priority
         })
 
         this.message = null

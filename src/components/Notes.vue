@@ -1,6 +1,6 @@
 <template>
     <div class="notes">
-        <div class="note" :class="{ full : !grid }" v-for="(note, index) in notes" :key="index">
+        <div class="note" :class="[{ full : !grid}, note.priority ]" v-for="(note, index) in notes" :key="index">
             <div class="note-header">
                 <p>{{ note.title }}</p>
                 <p style="cursor: pointer;" @click="removeNote(index)">x</p>
@@ -52,6 +52,18 @@ export default {
         &:hover {
             box-shadow: 0 30px 30px rgba(0,0,0,0.04);
             transform: translate(0, -6px);
+        }
+
+        &.standart {
+            border: 4px solid #fff,
+        }
+
+        &.important {
+            border: 4px solid yellow,
+        }
+
+        &.very-important {
+            border: 4px solid red,
         }
 
         &.full {
