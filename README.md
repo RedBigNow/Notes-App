@@ -1,5 +1,6 @@
-# vue-cli
-
+# Notes App (Vue.js 2)
+## Demo:
+https://redbignow.github.io/Notes-App/dist/index.html
 ## Project setup
 ```
 npm install
