@@ -46,33 +46,33 @@ export default {
 </script>
 
 <style lang="scss">
-    .new-note {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 80px;
+.new-note {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 80px;
 
-        button {
-            margin: 0 auto;
-        }
+    button {
+        margin: 0 auto;
     }
+}
 
-    .new-note__item {
-        width: 48%;
-        margin-bottom: 20px;
+.new-note__item {
+    width: 48%;
+    margin-bottom: 20px;
 
-        select {
-            width: 100%;
-            border-radius: 20px;
-            padding: 16px 26px;
-            margin-bottom: 30px;
-            cursor: pointer;
-        }
-    }
-
-    .new-note__item--full {
+    select {
         width: 100%;
+        border-radius: 20px;
+        padding: 16px 26px;
+        margin-bottom: 30px;
+        cursor: pointer;
     }
+}
+
+.new-note__item--full {
+    width: 100%;
+}
 </style>

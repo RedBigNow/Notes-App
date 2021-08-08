@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         message: {
@@ -18,12 +17,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .message {
-        text-align: center;
-        padding: 20px;
-    }
+.message {
+    text-align: center;
+    padding: 20px;
+}
 
-    p {
-        color: red;
-    }
+p {
+    color: red;
+}
 </style>
