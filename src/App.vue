@@ -16,7 +16,7 @@
                         <!-- search -->
                         <search
                         :value="search"
-                        placeholder="Find your note"
+                        placeholder="Найдите свою заметку"
                         @search="search = $event" />
 
                         <!-- icon controls -->
@@ -46,7 +46,7 @@ export default {
     },
     data() {
         return {
-            title: 'Notes App',
+            title: 'Заметки',
             search: '',
             message: null,
             grid: true,
@@ -57,38 +57,38 @@ export default {
             },
             notes: [
                 {
-                    title: 'First Note',
-                    descr: 'Description for first note',
+                    title: 'Портфолио',
+                    descr: 'Доработать адаптив',
                     date: new Date(Date.now()).toLocaleString(),
                     priority: 'standart'
                 },
                 {
-                    title: 'Second Note',
-                    descr: 'Description for second note',
+                    title: 'Блог на Nuxt.js',
+                    descr: 'Изменить внешний вид',
                     date: new Date(Date.now()).toLocaleString(),
                     priority: 'standart'
                 },
                 {
-                    title: 'Third Note',
-                    descr: 'Description for third note',
+                    title: 'Shop App',
+                    descr: 'Доработать внешний вид',
                     date: new Date(Date.now()).toLocaleString(),
-                    priority: 'standart'
+                    priority: 'very-important'
                 }
             ],
             priorityList: [
                 {
                 id: 1,
-                title: 'Standard note',
+                title: 'Стандартная заметка',
                 value: 'standart'
                 },
                 {
                 id: 2,
-                title: 'Important note',
+                title: 'Важная заметка',
                 value: 'important'
                 },
                 {
                 id: 3,
-                title: 'Very important note',
+                title: 'Очень важная заметка',
                 value: 'very-important'
                 }
             ]
@@ -119,7 +119,7 @@ export default {
             let {title, descr, priority} = this.note
 
             if(title === '') {
-                this.message = 'title can`t be blank!'
+                this.message = 'Заголовок не заполнен!'
                 return false
             }
 

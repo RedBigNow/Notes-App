@@ -63,6 +63,18 @@ input {
     min-width: 400px;
     height: auto;
 }
+
+@media screen and (max-width: 768px) {
+    .wrapper__search {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper__search input {
+        min-width: 100%;
+    }
+}
 </style>
 
 

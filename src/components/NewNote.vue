@@ -1,20 +1,22 @@
 <template>
     <div class="new-note">
         <div class="new-note__item">
-            <label>Title</label>
+            <label>Заголовок</label>
             <input v-model="note.title" type="text">
         </div>
         <div class="new-note__item">
-            <label>Priority</label>
-            <select v-model="prioritySelected">
-                <option v-for="(priority, id) in priorityList" :key="id" :value="priority.value">{{ priority.title }}</option>
-            </select>
+            <label>Приоритет</label>
+            <div class="select-wrapper">
+                <select v-model="prioritySelected">
+                    <option v-for="(priority, id) in priorityList" :key="id" :value="priority.value">{{ priority.title }}</option>
+                </select>
+            </div>
         </div>
         <div class="new-note__item new-note__item--full">
-            <label>Description</label>
+            <label>Описание</label>
             <textarea v-model="note.descr"></textarea>
         </div>
-        <button class="btn btnPrimary" @click="addNote">New note</button>
+        <button class="btn btnPrimary" @click="addNote">Создать заметку</button>
     </div>
 </template>
 
@@ -52,7 +54,8 @@ export default {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-bottom: 80px;
+    max-width: 760px;
+    margin: 0 auto 80px auto;
 
     button {
         margin: 0 auto;
@@ -74,5 +77,11 @@ export default {
 
 .new-note__item--full {
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .new-note__item {
+        width: 100%;
+    }
 }
 </style>
